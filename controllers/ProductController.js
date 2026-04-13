@@ -11,17 +11,6 @@ class ProductController {
     }
   }
 
-  async show(req, res, next) {
-    try {
-      const { id } = req.params;
-
-      const result = await ProductService.getById(id);
-
-      res.json(result);
-    } catch (error) {
-      next(error);
-    }
-  }
 
   async store(req, res, next) {
     try {
